@@ -49,4 +49,20 @@
             TRUNCATE TABLE course;
         </rollback>
     </changeSet>
+
+    <changeSet id="4" author="sha">
+        <sql>
+            CREATE TABLE user1 (
+            id BIGINT NOT NULL AUTO_INCREMENT,
+            title VARCHAR(255) NOT NULL,
+            author VARCHAR(255) NOT NULL,
+            category VARCHAR(255),
+            publish_date DATE,
+            CONSTRAINT pk_id PRIMARY KEY (id)
+            );
+        </sql>
+        <rollback>
+            TRUNCATE TABLE user1;
+        </rollback>
+    </changeSet>
 </databaseChangeLog>
